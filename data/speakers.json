@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Stafford",
+    "surname": "Masie",
+    "slug": "stafford-masie",
+    "company": "Africa Bitcoin Corporation",
+    "role": "",
+    "website": "https://africabitcoincorporation.com/",
+    "twitter": "https://x.com/staffordmasie",
+    "nostr": "",
+    "youtube": "",
+    "bio": "",
+    "photo": "images/Copy-of-AFRO53_Stafford-Masie-High-Res-2-1.jpg",
+    "featured": true
+  },
+  {
+    "name": "Emily",
+    "surname": "Hughes",
+    "slug": "emily-hughes",
+    "company": "Blockhunters - The Bitcoin Board Game",
+    "role": "",
+    "website": "",
+    "twitter": "https://x.com/emH__",
+    "nostr": "",
+    "youtube": "",
+    "bio": "",
+    "photo": "images/2P3A1632-crop.jpg",
+    "featured": true
+  },
+  {
+    "name": "Cryptosquid",
+    "surname": "",
+    "slug": "cryptosquid",
+    "company": "Start9",
+    "role": "",
+    "website": "",
+    "twitter": "https://x.com/The_Cryptosquid",
+    "nostr": "",
+    "youtube": "",
+    "bio": "",
+    "photo": "images/Cryptosquid---Interview.jpeg",
+    "featured": true
+  }
+]
