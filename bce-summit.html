@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Sat May 23 2026 15:29:37 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Sun May 24 2026 22:07:29 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6a048dadc189bf2603d2ee69" data-wf-site="6a048dadc189bf2603d2ee72" lang="en">
 <head>
   <meta charset="utf-8">
@@ -382,7 +382,7 @@ body::-webkit-scrollbar-thumb:hover {
   </section>
   <section id="socials" class="footer">
     <div class="es-100"></div>
-    <div class="title-container right-tilt">
+    <div class="title-container">
       <div class="title-holder">
         <h2 class="icon"></h2>
         <h2 class="title-heading">Socials</h2>
@@ -414,9 +414,8 @@ body::-webkit-scrollbar-thumb:hover {
       <div class="es-60"></div>
       <div class="w-layout-blockcontainer w-container">
         <div class="hosted-by-text centered">HOSTED BY </div>
-        <div class="es-40"></div>
+        <div class="es-20"></div>
         <div class="hosted-by">
-          <a href="https://8333.mobi/" target="_blank" class="host-logo-link w-inline-block"><img src="images/678589c5a079f9c9d8a5b952_machankura-logo-white.svg" loading="lazy" width="Auto" alt="" class="sponsor-logo sponsor-footer logo-inverted"></a>
           <a href="https://bitcoinekasi.com/" target="_blank" class="host-logo-link w-inline-block"><img src="images/67858941cb38f8def53fd8d6_bitcoin-africa-black-circle.svg" loading="lazy" width="Auto" alt="" class="sponsor-logo sponsor-footer"></a>
         </div>
       </div>
@@ -465,7 +464,6 @@ body::-webkit-scrollbar-thumb:hover {
   <script>
 // Titles
 /*
-document.addEventListener("DOMContentLoaded", function () {
             const offsetFactor = 0.007; 
             const strokeWidth = 1; // Stroke width for all layers
             const strokeColors = ["#FAB44B"]; // line color
@@ -542,7 +540,14 @@ if (daysEl && hoursEl && minutesEl && secondsEl) {
 // Deadlines are anchored to South African Standard Time (SAST, UTC+2, no DST)
 // so the countdown is identical regardless of the visitor's local timezone.
 const deadlines = [
-  	new Date('2026-05-24T23:59:59+02:00').getTime()
+  	new Date('2026-07-31T23:59:59+02:00').getTime(),
+    new Date('2026-08-31T23:59:59+02:00').getTime(),
+    new Date('2026-09-30T23:59:59+02:00').getTime(),
+    new Date('2026-10-31T23:59:59+02:00').getTime(),
+    new Date('2026-11-30T23:59:59+02:00').getTime(),
+    new Date('2026-12-31T23:59:59+02:00').getTime(),
+    new Date('2027-01-31T23:59:59+02:00').getTime(),
+    new Date('2027-02-27T23:59:59+02:00').getTime()
 ];
 function getNextDeadline() {
     const now = new Date().getTime();
@@ -577,19 +582,19 @@ if (currentDeadline) {
     }, 1000);
 }
 }
-    const menuLinks = document.querySelectorAll('.nav-link');
-    // Select the menu button or close button
-    const menuButton = document.querySelector('.menu-button'); 
-    // Add click event listener to each menu link
-    menuLinks.forEach(link => {
-      link.addEventListener('click', function() {
+  const menuLinks = document.querySelectorAll('.nav-link');
+  // Select the menu button or close button
+  const menuButton = document.querySelector('.menu-button'); 
+  // Add click event listener to each menu link
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Trigger a click on the menu button to close the menu
+      setTimeout(function() {
         // Trigger a click on the menu button to close the menu
-        setTimeout(function() {
-          // Trigger a click on the menu button to close the menu
-          menuButton.click();
-        }, 500); // 1000 milliseconds = 1 second
-      });
+        menuButton.click();
+      }, 500); // 1000 milliseconds = 1 second
     });
+  });
 });
 </script>
 </body>

@@ -1395,11 +1395,6 @@ a:hover {
   transition: all .2s;
 }
 
-.speaker-img:hover {
-  filter: none;
-  mix-blend-mode: exclusion;
-}
-
 .speaker-name {
   color: var(--black);
   text-align: center;
@@ -1476,6 +1471,13 @@ a:hover {
   transition: opacity .13s;
   position: absolute;
   inset: 0;
+}
+
+.speakers-collection {
+  background-image: url('../images/beadwork-b.svg');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 280px;
 }
 
 .speakers-collection.advisors-collection {
@@ -1595,7 +1597,8 @@ a:hover {
   grid-column-gap: 40px;
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding-top: 40px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 .collection-list.speakers-list.team-list {
@@ -1706,7 +1709,6 @@ a:hover {
   justify-content: center;
   place-items: center;
   width: 100%;
-  margin-right: 40px;
   line-height: 1.4em;
   display: flex;
 }
@@ -2157,10 +2159,6 @@ a:hover {
 
 .empty-state-blog {
   background-color: var(--galoygrey);
-}
-
-.code-embed {
-  display: none;
 }
 
 .blog-image {
@@ -2967,7 +2965,6 @@ a:hover {
   color: var(--red);
   text-align: right;
   margin-top: 4px;
-  margin-right: 20px;
   font-size: 19px;
   font-weight: 300;
 }
@@ -3345,6 +3342,9 @@ a:hover {
   }
 
   .collection-list.speakers-list.team-list {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     place-items: start center;
   }
 
