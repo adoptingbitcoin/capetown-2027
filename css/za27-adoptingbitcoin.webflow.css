@@ -67,18 +67,18 @@
   --black: black;
   --white-2: white;
   --bg: #05051f;
-  --white: white;
   --galoyblue: #3654ff;
+  --white: white;
   --fontgrey: grey;
   --adopting-yellow: #eedb5f;
   --cptbg: #484139;
   --dark-red: #670e0e;
+  --red: #ab1215;
   --sand-white: #eeece9;
   --neon-blue: #0400ff;
   --galoygrey: #1e1e1e;
   --warm-pink: #ff58a7;
   --sand: #f7e2b2;
-  --red: #ab1215;
   --bitcoinorange: #f68e1d;
   --border: 1px;
   --midnight-blue: #171742;
@@ -267,16 +267,16 @@ a:hover {
 }
 
 .nav-link {
-  color: var(--white);
+  color: var(--capetownorange);
   letter-spacing: .25px;
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 26px;
   margin-left: 0;
   margin-right: 0;
-  padding: 12px 100px;
-  font-size: 20px;
-  font-weight: 500;
+  padding: 10px 100px;
+  font-size: 22px;
+  font-weight: 700;
   line-height: 1.2em;
   text-decoration: none;
   transition: all .2s;
@@ -751,7 +751,7 @@ a:hover {
 
 .button {
   border: 2px solid var(--dark-red);
-  background-color: var(--dark-red);
+  background-color: var(--red);
   color: var(--sand-white);
   text-transform: uppercase;
   cursor: pointer;
@@ -819,7 +819,7 @@ a:hover {
 .button.book-now.book-now-fixed {
   z-index: 3;
   border-color: var(--dark-red);
-  background-color: var(--dark-red);
+  background-color: var(--red);
   color: var(--sand-white);
   text-shadow: none;
   display: block;
@@ -1174,6 +1174,8 @@ a:hover {
 
 .h3.orange-color {
   color: var(--capetownorange);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--black);
 }
 
 .h3.sand-color {
@@ -1186,6 +1188,14 @@ a:hover {
   background-color: var(--sand-white);
   color: var(--cptbg);
   display: inline-block;
+}
+
+.h3.red-text {
+  color: var(--red);
+}
+
+.h3.dark-red-text {
+  color: var(--dark-red);
 }
 
 .title-container {
@@ -1405,7 +1415,7 @@ a:hover {
 .speaker-name {
   color: var(--black);
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.1em;
 }
@@ -1414,7 +1424,7 @@ a:hover {
   color: var(--black);
   text-align: center;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.3em;
 }
 
@@ -1494,6 +1504,7 @@ a:hover {
 }
 
 .collection-item {
+  margin-bottom: 20px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1601,8 +1612,8 @@ a:hover {
 }
 
 .collection-list.speakers-list {
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
+  grid-column-gap: 60px;
+  grid-row-gap: 60px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding-top: 60px;
   padding-bottom: 20px;
@@ -1637,8 +1648,13 @@ a:hover {
 .speaker-link {
   background-color: var(--capetownorange);
   border-radius: 50%;
+  transition: all .12s;
   position: relative;
   overflow: hidden;
+}
+
+.speaker-link:hover {
+  transform: scale(1.03);
 }
 
 .speaker-link.advisors-link {
@@ -2309,11 +2325,13 @@ a:hover {
 }
 
 .new-window-icon {
+  opacity: .4;
   pointer-events: none;
   width: 15px;
   position: absolute;
   top: 8px;
   right: 82px;
+  transform: translate(0, -3px);
 }
 
 .menu-wrapper {
@@ -2472,8 +2490,7 @@ a:hover {
 }
 
 .speaker-name-link:hover {
-  color: var(--warm-pink);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .speaker-name-link.speaker-name {
@@ -3228,6 +3245,10 @@ a:hover {
   padding-right: 3px;
 }
 
+.social-template {
+  border: 1px dashed #000;
+}
+
 @media screen and (min-width: 1280px) {
   h1 {
     font-size: 72px;
@@ -3889,6 +3910,8 @@ a:hover {
   }
 
   .collection-list.speakers-list {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
@@ -4916,12 +4939,12 @@ a:hover {
 
   .speaker-name {
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .speaker-title {
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .speaker-title.speaker-page {

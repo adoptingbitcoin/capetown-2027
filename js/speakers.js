@@ -8,7 +8,7 @@
 
   var BASE_URL = 'https://za27.adoptingbitcoin.org/';
   var JSON_PATH = 'data/speakers.json';
-  var PLACEHOLDER_IMG = 'images/placeholder-speaker.svg';
+  var PLACEHOLDER_IMG = 'images/anon-img.png';
 
   /**
    * HTML-escape a string to prevent XSS / rendering issues.
@@ -88,11 +88,11 @@
       item.className = 'collection-item';
 
       item.innerHTML =
-        '<a href="speaker.html?slug=' + encodeURIComponent(slug) + '" class="speaker-link w-inline-block">' +
+        '<a href="speaker.html?s=' + encodeURIComponent(slug) + '" class="speaker-link w-inline-block">' +
           '<div class="speaker-img-overlay"></div>' +
-          '<img src="' + escapeHTML(photo) + '" loading="lazy" alt="' + escapeHTML(name) + '" class="speaker-img">' +
+          '<img src="' + escapeHTML(photo) + '" loading="lazy" alt="' + escapeHTML(name) + '" class="speaker-img" onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\'">' +
         '</a>' +
-        '<a href="speaker.html?slug=' + encodeURIComponent(slug) + '" class="speaker-name-link w-inline-block">' +
+        '<a href="speaker.html?s=' + encodeURIComponent(slug) + '" class="speaker-name-link w-inline-block">' +
           '<div class="speaker-name">' + escapeHTML(name) + '</div>' +
         '</a>' +
         '<div class="speaker-title">' + escapeHTML(company) + '</div>';
@@ -175,7 +175,7 @@
             '</div>' +
             '<div class="w-col w-col-4">' +
               '<div class="speaker-img-bg">' +
-                '<img src="' + escapeHTML(photo) + '" loading="lazy" alt="' + escapeHTML(name) + '" class="speaker-page-image">' +
+                '<img src="' + escapeHTML(photo) + '" loading="lazy" alt="' + escapeHTML(name) + '" class="speaker-page-image" onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\'">' +
               '</div>' +
             '</div>' +
           '</div>' +
