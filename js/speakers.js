@@ -228,7 +228,7 @@
 
         if (detailContainer) {
           var params = new URLSearchParams(window.location.search);
-          var slug = params.get('slug');
+          var slug = params.get('s');
 
           if (!slug) {
             window.location.href = 'speakers.html';
