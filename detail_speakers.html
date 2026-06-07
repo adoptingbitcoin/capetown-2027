@@ -249,36 +249,6 @@ body::-webkit-scrollbar-thumb:hover {
     </div>
     <div class="hero-subpage-img-wrapper"><img sizes="(max-width: 2509px) 100vw, 2509px" srcset="images/road-trip-hero-p-500.webp 500w, images/road-trip-hero-p-800.webp 800w, images/road-trip-hero-p-1080.webp 1080w, images/road-trip-hero-p-1600.webp 1600w, images/road-trip-hero-p-2000.webp 2000w, images/road-trip-hero.webp 2509w" alt="" src="images/road-trip-hero.webp" loading="lazy" class="hero-subpage-img"></div>
   </section>
-  <section class="section section-speaker">
-    <div class="container container-narrow">
-      <div class="columns-speaker w-row">
-        <div class="w-col w-col-8">
-          <div>
-            <h2 class="speaker-heading w-dyn-bind-empty"></h2>
-            <div class="es-20"></div>
-            <a href="#" class="speaker-title speaker-page w-inline-block">
-              <div class="w-dyn-bind-empty"></div>
-            </a>
-            <div class="speaker-title speaker-page w-dyn-bind-empty"></div>
-            <div class="speaker-socials speaker-socials-subpage">
-              <a href="#" class="speaker-socials-icon w-inline-block"><img src="images/x-icon.svg" loading="lazy" alt=""></a>
-              <div class="w-embed">
-                <a href="https://primal.net/p/" target="_blank" class="speaker-socials-icon w-inline-block"><img src="https://cdn.prod.website-files.com/6828b74c83472364dfc249b2/6828b74c83472364dfc24a3b_Nostr.svg" loading="lazy" width="22" alt=""></a>
-              </div>
-            </div>
-            <div class="es-20"></div>
-            <div class="speaker-bio w-dyn-bind-empty w-richtext"></div>
-            <div class="es-20"></div>
-          </div>
-        </div>
-        <div class="w-col w-col-4">
-          <div class="speaker-img-bg"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="speaker-page-image w-dyn-bind-empty"></div>
-        </div>
-      </div>
-      <div class="es-60"></div>
-      <div class="w-dyn-bind-empty w-video w-embed"></div>
-    </div>
-  </section>
   <div id="speaker-detail" class="speaker-detail"></div>
   <section id="tickets" class="section">
     <div class="es-80"></div>
@@ -482,7 +452,7 @@ function updateSatsValues(satsPerZar) {
         const priceValue = parseInt(priceText, 10) || 0;
         let satsAmount = priceValue * satsPerZar;
         // Round up to nearest 100 sats
-        satsAmount = Math.ceil(satsAmount / 100) * 100;
+        satsAmount = Math.ceil(satsAmount / 100) * 10;
         // Check if a sats element already exists next to this one
         let satsSibling = priceElement.nextElementSibling;
         if (satsSibling && satsSibling.classList.contains('ticket-price-sats')) {

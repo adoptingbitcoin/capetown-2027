@@ -633,7 +633,7 @@ function updateSatsValues(satsPerZar) {
         const priceValue = parseInt(priceText, 10) || 0;
         let satsAmount = priceValue * satsPerZar;
         // Round up to nearest 100 sats
-        satsAmount = Math.ceil(satsAmount / 100) * 100;
+        satsAmount = Math.ceil(satsAmount / 100) * 10;
         // Check if a sats element already exists next to this one
         let satsSibling = priceElement.nextElementSibling;
         if (satsSibling && satsSibling.classList.contains('ticket-price-sats')) {
