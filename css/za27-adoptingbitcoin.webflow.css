@@ -658,6 +658,7 @@ a:hover {
 
 .section.section-speaker {
   padding-top: 0;
+  display: none;
 }
 
 .text-block {
@@ -1174,8 +1175,9 @@ a:hover {
 
 .h3.orange-color {
   color: var(--capetownorange);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--black);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #cc9036;
+  text-shadow: 0 1px 2px #0006;
 }
 
 .h3.sand-color {
@@ -1741,7 +1743,7 @@ a:hover {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   justify-items: center;
   display: grid;
@@ -1750,7 +1752,7 @@ a:hover {
 .footer-social-item {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
-  border: 2px solid var(--black);
+  border: 1px dashed var(--black);
   background-color: var(--capetownorange);
   border-radius: 50%;
   grid-template-rows: auto;
@@ -2809,7 +2811,7 @@ a:hover {
 
 .youtube-video-container {
   text-align: center;
-  background-image: url('../images/stream.jpg');
+  background-image: url('../images/cape-town-stream-gif.gif');
   background-position: 50%;
   background-size: cover;
   border-radius: 20px;
@@ -2839,6 +2841,7 @@ a:hover {
 }
 
 .play-btn {
+  transform-origin: center;
   width: 55px;
 }
 
@@ -2991,8 +2994,9 @@ a:hover {
 .hosted-by-text {
   color: var(--red);
   text-align: right;
+  letter-spacing: 2px;
   margin-top: 4px;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -5031,7 +5035,10 @@ a:hover {
   .footer-socials {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .es-60 {
