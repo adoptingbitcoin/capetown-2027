@@ -71,11 +71,11 @@
   --white: white;
   --fontgrey: grey;
   --adopting-yellow: #eedb5f;
-  --cptbg: #484139;
   --dark-red: #670e0e;
   --red: #ab1215;
   --sand-white: #eeece9;
   --neon-blue: #0400ff;
+  --cptbg: #484139;
   --galoygrey: #1e1e1e;
   --warm-pink: #ff58a7;
   --sand: #f7e2b2;
@@ -653,7 +653,7 @@ a:hover {
 }
 
 .section.section-dark {
-  background-color: var(--cptbg);
+  background-color: var(--black);
 }
 
 .section.section-speaker {
@@ -2261,7 +2261,7 @@ a:hover {
 }
 
 .yellow-text {
-  color: var(--adopting-yellow);
+  color: var(--capetownorange);
 }
 
 .countdown-container {
@@ -2952,6 +2952,10 @@ a:hover {
   transform: rotate(4deg)translate(-50%, 20px);
 }
 
+.hero-graphic.hero-graphic-footer {
+  filter: brightness(40%);
+}
+
 .hero-slider {
   z-index: 1;
   background-color: #0000;
@@ -2965,6 +2969,12 @@ a:hover {
 
 .slide-nav {
   display: none;
+}
+
+.mask {
+  background-image: url('../images/slide10.png');
+  background-position: 0 0;
+  background-size: auto;
 }
 
 .body-dark {
