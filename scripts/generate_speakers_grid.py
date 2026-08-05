@@ -21,11 +21,15 @@ SPEAKERS_HTML = REPO_ROOT / "speakers.html"
 
 SCRIPT_TAG = '<script src="js/speakers.js"></script>'
 
-# Markers used to find the speakers-collection div
-COLLECTION_OPEN = '<div class="speakers-collection">'
-COLLECTION_CLOSE_AND_SPACER = """\
-      </div>
-      <div class="es-100"></div>"""
+# Match the speakers-collection div and whatever it currently contains,
+# whether Webflow collapsed it to one line (<div class="speakers-collection"></div>)
+# or left it multi-line with placeholder content inside. The [\s\S]*? is
+# non-greedy so it stops at the FIRST closing </div>.
+COLLECTION_RE = re.compile(
+    r'<div class="speakers-collection">[\s\S]*?</div>'
+)
+# Canonical empty form we normalise to.
+COLLECTION_EMPTY = '<div class="speakers-collection"></div>'
 
 
 def main():
@@ -33,16 +37,14 @@ def main():
     speakers = json.loads(SPEAKERS_JSON.read_text())
     changes = []
 
-    # 1. Empty the speakers-collection div (remove any Webflow placeholder content)
-    if COLLECTION_OPEN in html:
-        start = html.index(COLLECTION_OPEN)
-        end = html.index(COLLECTION_CLOSE_AND_SPACER, start)
-        current_content = html[start + len(COLLECTION_OPEN):end]
-
-        if current_content.strip():
-            # There's content inside — empty it
-            new_block = f"{COLLECTION_OPEN}\n{COLLECTION_CLOSE_AND_SPACER}"
-            html = html[:start] + new_block + html[end + len(COLLECTION_CLOSE_AND_SPACER):]
+    # 1. Empty the speakers-collection div (remove any Webflow placeholder content).
+    #    Robust to both the collapsed one-line form and the old multi-line form.
+    m = COLLECTION_RE.search(html)
+    if m:
+        block = m.group(0)
+        inner = block[len('<div class="speakers-collection">'):-len('</div>')]
+        if inner.strip() and block != COLLECTION_EMPTY:
+            html = html[:m.start()] + COLLECTION_EMPTY + html[m.end():]
             changes.append("emptied speakers-collection div")
 
     # 2. Ensure js/speakers.js script tag is present
