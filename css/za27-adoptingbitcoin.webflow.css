@@ -3023,6 +3023,10 @@ a:hover {
   margin-top: 0;
 }
 
+.link-text.red-text {
+  color: var(--red);
+}
+
 .video-overlay {
   background-image: linear-gradient(#000000e6, #0000);
   height: 130px;
