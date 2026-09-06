@@ -1,2 +1,5 @@
 .DS_Store
 za27-adoptingbitcoin.webflow/
+
+__pycache__/
+*.pyc
