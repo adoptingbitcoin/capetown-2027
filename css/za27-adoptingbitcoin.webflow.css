@@ -65,7 +65,6 @@
 :root {
   --capetownorange: #fab44b;
   --black: black;
-  --white-2: white;
   --bg: #05051f;
   --galoyblue: #3654ff;
   --white: white;
@@ -75,6 +74,7 @@
   --red: #ab1215;
   --sand-white: #eeece9;
   --neon-blue: #0400ff;
+  --white-2: white;
   --cptbg: #484139;
   --galoygrey: #1e1e1e;
   --warm-pink: #ff58a7;
@@ -144,7 +144,6 @@ body {
 }
 
 h1 {
-  color: var(--white-2);
   text-transform: uppercase;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -453,6 +452,10 @@ a:hover {
 .container.no-padding {
   padding-left: 0;
   padding-right: 0;
+}
+
+.container.container-blog {
+  max-width: 720px;
 }
 
 .hero-wrapper {
@@ -2151,25 +2154,24 @@ a:hover {
 }
 
 .blog-title {
-  margin-top: 10px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.3em;
 }
 
 .blog-date {
-  color: var(--fontgrey);
+  color: var(--black);
   font-size: 14px;
   font-weight: 400;
 }
 
 .blog-read-link {
-  color: var(--adopting-yellow);
+  color: var(--red);
   margin-top: 10px;
 }
 
 .blog-post-cover-img {
-  margin-bottom: 100px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 
@@ -2187,7 +2189,11 @@ a:hover {
 }
 
 .blog-image {
+  width: 100%;
+  padding-top: 71%;
   transition: all .12s;
+  position: relative;
+  overflow: hidden;
 }
 
 .blog-image:hover {
@@ -2628,7 +2634,6 @@ a:hover {
 }
 
 .blogpost-date {
-  color: var(--adopting-yellow);
   font-size: 16px;
 }
 
@@ -3264,6 +3269,13 @@ a:hover {
 
 .social-template {
   border: 1px dashed #000;
+}
+
+.blog-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 1280px) {
