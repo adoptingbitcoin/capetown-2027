@@ -136,7 +136,12 @@ def markdown_to_html(md: str):
     flush_para()
     if title is None:
         title = "Untitled"
-    return title, "\n".join(out)
+    # Interleave the site's spacer convention (es-20 = 20px) between body blocks
+    # so the blank "free lines" in the Markdown become visible breathing room,
+    # matching how the rest of the site spaces its content.
+    spacer = '<div class="es-20"></div>'
+    body = f"\n{spacer}\n".join(out)
+    return title, body
 
 
 # ---------------------------------------------------------------------------
