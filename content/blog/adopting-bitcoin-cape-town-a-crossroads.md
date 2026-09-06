@@ -45,9 +45,3 @@ Bitcoin is a paradigm shift. Paradigm shifts are not easy, gentle, comfortable, 
 I don't know if this will work. I have no idea if we can even fund a conference like this going forward. If we take this stance, most of the sponsors who might have thrown us scraps will walk away. This becomes a genuinely grassroots conference, funded by ticket sales or not funded at all. The sponsors left willing to stand with will be few. And none of them are the biggest players in this space.
 
 But I'd rather attempt this and fail, than keep drifting toward a place where the conference does not make it absolutely clear: Adopting Bitcoin is all about exiting fiat. 
-
-# Proposal for 2027 Theme:
-
-**Adopting Bitcoin Cape Town**
-
-***Join the peaceful revolution. Exit fiat.***
