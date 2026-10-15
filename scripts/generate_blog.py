@@ -269,7 +269,10 @@ def rebuild_listing(index):
         return datetime.min
     entries = sorted(index, key=key, reverse=True)
     cards = "\n".join(_card(e) for e in entries) if entries else ""
-    new_block = f'<div class="blog-list">\n{cards}\n        </div>\n      </div>\n    </div>'
+    # BLOG_LIST_RE consumes only up to the .blog-list's own closing tag (the
+    # card's two closes + the list's close), so emit exactly that one close.
+    # Emitting the wrapper closes too leaked 2 stray </div> per run.
+    new_block = f'<div class="blog-list">\n{cards}\n        </div>'
     if not BLOG_LIST_RE.search(html):
         raise SystemExit("ERROR: could not find .blog-list block in blog.html")
     html = BLOG_LIST_RE.sub(new_block, html, count=1)
